@@ -46,7 +46,9 @@ if [ ! -f "$PERLBREW_ROOT/etc/bashrc" ]; then
     $perlbrew init
 fi
 
-. "$PERLBREW_ROOT/etc/bashrc"
+if [ -n "$BASH_VERSION" ]; then
+    source "$PERLBREW_ROOT/etc/bashrc"
+fi
 
 if [ "$1" = "-v" ]; then
     echo "$perlbrew $VERSION"
@@ -65,11 +67,15 @@ fi
 version="$1"
 shift
 
-env=`$perlbrew env "$version"` || exit 2
+env=`$perlbrew env "$version" | sed 's/^export //'` || exit 2
 eval $env
-export PATH="$PERLBREW_PATH:${PATH:-/usr/bin:/bin}"
-export debian_chroot="$PERLBREW_PERL"
-export PERL5LIB=$(perl -le 'print join ":", grep { /site_perl/ } @INC')
+export PERLBREW_MANPATH PERLBREW_PATH PERLBREW_ROOT PERLBREW_VERSION
+
+PATH="$PERLBREW_PATH:${PATH:-/usr/bin:/bin}"
+PERL5LIB=$(perl -le 'print join ":", grep { /site_perl/ } @INC')
+debian_chroot="$PERLBREW_PERL"
+
+export PATH PERL5LIB debian_chroot
 
 if [ $# -gt 0 ]; then
     "$@"
