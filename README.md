@@ -25,7 +25,11 @@ current shell.
 
 # INSTALLATION
 
-## User account only
+## With cpanm(1)
+
+    $ cpanm App::perluse
+
+## Without cpanm(1)
 
     $ lwp-mirror http://git.io/6EbYnw ~/bin/perluse
     $ chmod +x ~/bin/perluse

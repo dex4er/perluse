@@ -84,7 +84,11 @@ fi
 
 =head1 INSTALLATION
 
-=head2 User account only
+=head2 With cpanm(1)
+
+  $ cpanm App::perluse
+
+=head2 Without cpanm(1)
 
   $ lwp-mirror http://git.io/6EbYnw ~/bin/perluse
   $ chmod +x ~/bin/perluse

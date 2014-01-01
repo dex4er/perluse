@@ -16,9 +16,8 @@ my $build = Module::Build::My->new(
     module_name             => $module,
     dist_version_from       => 'lib/App/perluse.pm',
     license                 => 'perl',
-    requires                => {
-    },
-    build_requires          => {
+    recommends              => {
+        'App::perlbrew'         => 0,
     },
     script_files            => 'script',
     auto_configure_requires => 0,
