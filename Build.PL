@@ -21,7 +21,6 @@ my $build = Module::Build::My->new(
     build_requires          => {
     },
     script_files            => 'script',
-    pm_files                => { },
     auto_configure_requires => 0,
     create_makefile_pl      => 'traditional',
     create_license          => 1,

@@ -6,10 +6,20 @@ package App::perluse;
 
 App::perluse - Use the specified perl in shell command
 
+=head1 SYNOPSIS
+
+  $ cpanm App::perluse
+
+  $ perluse
+
 =head1 DESCRIPTION
 
-This is not real module because L<perluse> command is just a POSIX shell
-script.
+See perluse(1) for available command line options.
+
+C<App::perluse> is not real module because perluse(1) command is just a POSIX
+shell script.
+
+It allows to install this script with cpan(1) or cpanm(1) command.
 
 =cut
 
