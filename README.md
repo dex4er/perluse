@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/dex4er/perluse.png?branch=master)](https://travis-ci.org/dex4er/perluse)
+
 # NAME
 
 perluse - Use the specified perl in shell command
