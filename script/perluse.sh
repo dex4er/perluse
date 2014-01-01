@@ -2,7 +2,10 @@
 
 : << POD
 
-Yes! This is POSIX shell script.
+Yes! This is just a POSIX shell script but we need some Perl-like boilerplate.
+
+use strict;
+use warnings;
 
 =head1 NAME
 
@@ -31,12 +34,11 @@ current shell.
 
 =cut
 
-our $VERSION='0.0100';
-
 POD
 
 
 perlbrew=perlbrew
+VERSION=0.0100
 
 PERLBREW_ROOT=${PERLBREW_ROOT:-$HOME/perl5/perlbrew}
 
@@ -45,6 +47,11 @@ if [ ! -f "$PERLBREW_ROOT/etc/bashrc" ]; then
 fi
 
 . "$PERLBREW_ROOT/etc/bashrc"
+
+if [ "$1" = "-v" ]; then
+    echo "$perlbrew $VERSION"
+    exit 1
+fi
 
 if [ $# -lt 1 ]; then
     echo "Usage:"
