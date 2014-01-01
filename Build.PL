@@ -8,6 +8,8 @@ use warnings;
 use lib 'inc';
 use Module::Build::My;
 
+die "perluse command needs /bin/sh executble\n" unless -x '/bin/sh';
+
 my $module = 'App::perluse';
 
 (my $dist = $module) =~ s/::/-/g;
