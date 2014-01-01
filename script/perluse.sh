@@ -86,7 +86,8 @@ fi
 
 =head2 User account only
 
-  $ PERL_MB_OPT='--prefix ~' cpanm App::perluse
+  $ lwp-mirror http://git.io/6EbYnw ~/bin/perluse
+  $ chmod +x ~/bin/perluse
 
 =head1 SEE ALSO
 
