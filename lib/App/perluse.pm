@@ -40,6 +40,20 @@ our $VERSION = '0.0101';
 1;
 
 
+=head1 INSTALLATION
+
+=head2 With cpanm(1)
+
+  $ cpanm App::perluse
+
+=head2 Directly
+
+  $ lwp-request http://git.io/dXVJCg | sh
+
+or
+
+  $ curl -kL http://git.io/dXVJCg | sh
+
 =head1 SEE ALSO
 
 L<http://github.com/dex4er/perluse>, perluse(1).

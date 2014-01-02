@@ -94,7 +94,7 @@ fi
 
   $ cpanm App::perluse
 
-=head2 Without cpanm(1)
+=head2 Directly
 
   $ lwp-request http://git.io/dXVJCg | sh
 
