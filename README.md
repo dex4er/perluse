@@ -33,8 +33,11 @@ current shell.
 
 ## Without cpanm(1)
 
-    $ lwp-mirror http://git.io/6EbYnw ~/bin/perluse
-    $ chmod +x ~/bin/perluse
+    $ lwp-request http://git.io/dXVJCg | sh
+
+or
+
+    $ curl -kL http://git.io/dXVJCg | sh
 
 # SEE ALSO
 
