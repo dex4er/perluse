@@ -10,6 +10,12 @@ App::perluse - Use the specified perl in shell command
 
   $ cpanm App::perluse
 
+  $ perluse 5.18.1 perl -E 'say $^V'
+
+  $ perluse blead perldoc perldelta
+
+  $ perluse perl-5.18.1
+
   $ perluse
 
 =head1 DESCRIPTION
@@ -17,9 +23,8 @@ App::perluse - Use the specified perl in shell command
 See perluse(1) for available command line options.
 
 C<App::perluse> is not real module because perluse(1) command is just a POSIX
-shell script.
-
-It allows to install this script with cpan(1) or cpanm(1) command.
+shell script and it allows to install this script with cpan(1) or cpanm(1)
+command.
 
 =cut
 
