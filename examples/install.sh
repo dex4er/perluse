@@ -3,9 +3,9 @@
 url=https://raw.github.com/dex4er/perluse/master/script/perluse.sh
 
 if command -v curl >/dev/null; then
-    get='curl -kL --stderr /dev/null'
+    get='curl -skL'
 elif command -v wget >/dev/null; then
-    get='wget --no-check-certificate -O- -o/dev/null'
+    get='wget --no-check-certificate -O- --quiet'
 elif command -v lwp-request >/dev/null; then
     PERL_LWP_SSL_VERIFY_HOSTNAME=0
     export PERL_LWP_SSL_VERIFY_HOSTNAME
