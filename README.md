@@ -31,7 +31,7 @@ current shell.
 
     $ cpanm App::perluse
 
-## Without cpanm(1)
+## Directly
 
     $ lwp-request http://git.io/dXVJCg | sh
 
