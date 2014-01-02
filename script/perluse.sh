@@ -38,7 +38,7 @@ POD
 
 
 perlbrew=perlbrew
-VERSION=0.0100
+VERSION=0.0101
 
 PERLBREW_ROOT=${PERLBREW_ROOT:-$HOME/perl5/perlbrew}
 
