@@ -37,10 +37,15 @@ current shell.
 POD
 
 
-perlbrew=perlbrew
 VERSION=0.0102
 
 PERLBREW_ROOT=${PERLBREW_ROOT:-$HOME/perl5/perlbrew}
+
+if [ -x "$PERLBREW_ROOT/bin/perlbrew" ]; then
+    perlbrew="$PERLBREW_ROOT/bin/perlbrew"
+else
+    perlbrew=perlbrew
+fi
 
 if [ ! -f "$PERLBREW_ROOT/etc/bashrc" ]; then
     $perlbrew init
