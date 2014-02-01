@@ -56,7 +56,7 @@ if [ -n "$BASH_VERSION" ]; then
 fi
 
 if [ "$1" = "-v" ]; then
-    echo "$perlbrew $VERSION"
+    echo "perluse $VERSION"
     exit 1
 fi
 
