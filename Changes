@@ -1,6 +1,7 @@
 0.0200  2014-07-04      Piotr Roszatycki <dexter@cpan.org>
 
-* 
+* Support ActivePerl if is located in standard directory:
+  /opt/ActivePerl-VERSION or $HOME/opt/ActivePerl-VERSION.
 
 0.0102  2014-02-01      Piotr Roszatycki <dexter@cpan.org>
 

@@ -10,11 +10,11 @@ App::perluse - Use the specified perl in shell command
 
   $ cpanm App::perluse
 
-  $ perluse 5.18.1 perl -E 'say $^V'
+  $ perluse 5.20.0 perl -E 'say $^V'
 
   $ perluse blead perldoc perldelta
 
-  $ perluse perl-5.18.1
+  $ perluse perl-5.20.0
 
   $ perluse
 
@@ -53,6 +53,10 @@ our $VERSION = '0.0200';
 or
 
   $ curl -kL http://git.io/dXVJCg | sh
+
+or
+
+  $ wget -O- http://git.io/dXVJCg | sh
 
 =head1 SEE ALSO
 
