@@ -37,7 +37,7 @@ current shell.
 POD
 
 
-VERSION=0.0102
+VERSION=0.0200
 
 PERLBREW_ROOT=${PERLBREW_ROOT:-$HOME/perl5/perlbrew}
 
