@@ -1,13 +1,22 @@
 # [![Build Status](https://travis-ci.org/dex4er/perluse.png?branch=master)](https://travis-ci.org/dex4er/perluse)
 
+sudo: false
+
 language: perl
+
+matrix:
+  include:
+    - env: PERL_VERSION=5.8
+    - env: PERL_VERSION=5.30
+
 before_install:
   - sudo apt-get update -qq
+
 install:
   - sudo apt-get install -qq spell
+  - perlbrew install --notest --noman $PERL_VERSION || true
+  - perlbrew use $PERL_VERSION
   - cpanm --with-recommends --installdeps --notest --skip-satisfied git://github.com/dex4er/perl-DEXTER-Module-Skeleton
   - cpanm --with-recommends --installdeps --notest --skip-satisfied .
+
 script: ./Dist.SH
-perl:
-  - 5.8
-  - 5.30
