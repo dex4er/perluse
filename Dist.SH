@@ -10,7 +10,7 @@ $PERL Build.PL
 
 rm -f MANIFEST
 
-perl -MPod::Readme -e 'Pod::Readme->new->parse_from_filehandle' \
+perl -MPod::Readme -CS -e 'Pod::Readme->new->parse_from_filehandle' \
     < script/perluse.sh \
     > README
 
@@ -18,7 +18,7 @@ perl -MPod::Readme -e 'Pod::Readme->new->parse_from_filehandle' \
 if [ -f .travis.yml ]; then
     grep 'Build Status' .travis.yml | sed 's/^# //; s/.$/&\n/' > README.md
 fi
-$PERL -MPod::Markdown -e '$p=Pod::Markdown->new;$p->parse_from_filehandle(\*STDIN);print $p->as_markdown' \
+$PERL -MPod::Markdown -CS -e '$p=Pod::Markdown->new;$p->parse_from_filehandle(\*STDIN);print $p->as_markdown' \
     < script/perluse.sh \
     | $PERL -pe 'sub a { $_[0]=~tr/ /-/; $_[0] } s,[(]http://search.cpan.org/perldoc[?]([^#)]*)(#[^)]*)?[)],a("(http://metacpan.org/module/$1$2)"),eg' \
     >> README.md

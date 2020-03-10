@@ -7,7 +7,7 @@ perluse - Use the specified perl in shell command
 # SYNOPSIS
 
 **perluse** _version_
-perl-_version_ | _version_ | _name_
+perl-_version_Â |Â _version_Â |Â _name_
 \[command\]
 
 Examples:
