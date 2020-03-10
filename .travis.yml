@@ -6,8 +6,8 @@ language: perl
 
 matrix:
   include:
-    - env: PERL_VERSION=5.8
-    - env: PERL_VERSION=5.30
+    - env: PERL_VERSION=5.8.9
+    - env: PERL_VERSION=5.30.1
 
 before_install:
   - sudo apt-get update -qq
