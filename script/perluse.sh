@@ -19,11 +19,11 @@ S<perl-I<version> | I<version> | I<name>>
 
 Examples:
 
-  $ perluse 5.20.0 perl -E 'say $^V'
+  $ perluse 5.30.0 perl -E 'say $^V'
 
   $ perluse blead perldoc perldelta
 
-  $ perluse perl-5.20.0
+  $ perluse perl-5.30.0
 
   $ perluse
 
@@ -40,7 +40,7 @@ directory: F</opt/ActivePerl-VERSION> or F<$HOME/opt/ActivePerl-VESION>.
 POD
 
 
-VERSION=0.0200
+VERSION=0.0201
 
 PERLBREW_ROOT=${PERLBREW_ROOT:-$HOME/perl5/perlbrew}
 
@@ -56,7 +56,7 @@ if [ ! -f "$PERLBREW_ROOT/etc/bashrc" ]; then
     $perlbrew init
 fi
 
-if [ -n "$BASH_VERSION" ]; then
+if [ -n "$BASH_VERSION" ] && [ -f "$PERLBREW_ROOT/etc/bashrc" ]; then
     source "$PERLBREW_ROOT/etc/bashrc"
 fi
 
@@ -150,7 +150,7 @@ Piotr Roszatycki <dexter@cpan.org>
 
 =head1 LICENSE
 
-Copyright (c) 2011-2014 Piotr Roszatycki <dexter@cpan.org>.
+Copyright (c) 2011-2014, 2020 Piotr Roszatycki <dexter@cpan.org>.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as perl itself.
