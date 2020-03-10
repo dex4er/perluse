@@ -10,4 +10,4 @@ install:
 script: ./Dist.SH
 perl:
   - 5.8
-  - 5.18
+  - 5.30
