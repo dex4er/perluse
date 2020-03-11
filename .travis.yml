@@ -1,10 +1,11 @@
 # [![Build Status](https://travis-ci.org/dex4er/perluse.png?branch=master)](https://travis-ci.org/dex4er/perluse)
 
-sudo: false
+os: linux
+dist: bionic
 
 language: perl
 
-matrix:
+jobs:
   include:
     - env: PERL_VERSION=5.8.9
     - env: PERL_VERSION=5.30.1 DIST_SH=yes
