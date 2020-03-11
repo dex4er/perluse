@@ -10,13 +10,13 @@ $PERL Build.PL
 
 rm -f MANIFEST
 
-perl -MPod::Readme -CS -e 'Pod::Readme->new->parse_from_filehandle' \
+$PERL -MPod::Readme -CS -e 'Pod::Readme->new->parse_from_filehandle' \
     < script/perluse.sh \
     > README
 
 : > README.md
 if [ -f .travis.yml ]; then
-    grep 'Build Status' .travis.yml | sed 's/^# //; s/.$/&\n/' > README.md
+    grep 'Build Status' .travis.yml | $PERL -pe 's/^# //; s/.$/$&\n/' > README.md
 fi
 $PERL -MPod::Markdown -CS -e '$p=Pod::Markdown->new;$p->parse_from_filehandle(\*STDIN);print $p->as_markdown' \
     < script/perluse.sh \

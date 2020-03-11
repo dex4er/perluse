@@ -10,11 +10,11 @@ App::perluse - Use the specified perl in shell command
 
   $ cpanm App::perluse
 
-  $ perluse 5.20.0 perl -E 'say $^V'
+  $ perluse 5.30.0 perl -E 'say $^V'
 
   $ perluse blead perldoc perldelta
 
-  $ perluse perl-5.20.0
+  $ perluse perl-5.30.0
 
   $ perluse
 
@@ -34,7 +34,7 @@ use 5.006;
 use strict;
 use warnings;
 
-our $VERSION = '0.0200';
+our $VERSION = '0.0201';
 
 
 1;
@@ -68,7 +68,7 @@ Piotr Roszatycki <dexter@cpan.org>
 
 =head1 LICENSE
 
-Copyright (c) 2011-2014 Piotr Roszatycki <dexter@cpan.org>.
+Copyright (c) 2011-2014, 2020 Piotr Roszatycki <dexter@cpan.org>.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as perl itself.
