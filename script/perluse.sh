@@ -40,7 +40,7 @@ directory: F</opt/ActivePerl-VERSION> or F<$HOME/opt/ActivePerl-VESION>.
 POD
 
 
-VERSION=0.0300
+VERSION=0.0301
 
 PERLBREW_ROOT=${PERLBREW_ROOT:-$HOME/perl5/perlbrew}
 
@@ -107,7 +107,7 @@ case "$version" in
 
         PATH="$PERLBREW_PATH:${PATH:-/usr/bin:/bin}"
         PERL5LIB=$(perl -le 'print join ":", grep { /site_perl/ } @INC')
-        VIRTUAL_ENV="$version"
+        VIRTUAL_ENV="$PERLBREW_PERL"
         debian_chroot="$PERLBREW_PERL"
 esac
 
